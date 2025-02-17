@@ -1,0 +1,7 @@
+r = int(input())
+matrix = [list(map(int, input().split())) for _ in range(r)]
+
+# Check if matrix is equal to its transpose
+symmetric = all(matrix[i][j] == matrix[j][i] for i in range(r) for j in range(r))
+
+print(1 if symmetric else 0, end="")
